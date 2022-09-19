@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../static/style.css" type="text/css" media="screen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{.Title}}</title>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+<body>
+  <header>
+    <h1 >Ascii Art Web</h1>
+  </header>
+  <div id="main">
+    
+		<form method="POST" action="/">   
+        
+      <label> <strong>Select a Police :</strong></label>
+      <select name="police">
+        <option {{.SSt}} value="standard" >standard</option>
+        <option {{.SSh}} value="shadow" >shadow</option>
+        <option {{.STh}} value="thinkertoy" >thinkertoy</option>
+        <option {{.SM1}} value="my-police1" >My Police 1</option>
+        <option {{.SM2}} value="my-police2" >My Police 2</option>
+      </select>
+      <br>
+			<textarea name="inputArea" placeholder="Type your text here." >{{.Txt}}</textarea>
+			<input id="button" class="submit styled" type="submit" value="Submit" />
+		</form>
+	</div>
+<div class="result"> 
+  <pre>{{.ResultAscii}}</pre> 
+</div>
+<footer>
+  <p>
+    <h5 id="readme"><a href="/static/README.html">README</a></h5>
+    <h4>Authors: Alann & Malek
+  </h4>
+</p>
+</footer>
+</body>
+</html>
